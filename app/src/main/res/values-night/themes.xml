@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.YeQuote" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tan_700</item>
+        <item name="colorPrimaryVariant">@color/tan_700</item>
+        <item name="colorOnPrimary">@color/tan_700</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tan_700</item>
+        <item name="colorSecondaryVariant">@color/tan_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/tan_700</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

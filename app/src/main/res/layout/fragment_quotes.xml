@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.quotes.QuotesFragment">
+
+
+    <TextView
+        android:id="@+id/tv_top_one"
+        android:layout_width="261dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="52dp"
+        android:text="@string/tv_top_text"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_top_two"
+        android:layout_width="219dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/tv_top_text"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_top_one"
+        app:layout_constraintStart_toStartOf="@+id/tv_top_one"
+        app:layout_constraintTop_toTopOf="@+id/tv_top_one" />
+
+    <TextView
+        android:id="@+id/tv_top_three"
+        android:layout_width="219dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/tv_top_text"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_top_one" />
+
+    <TextView
+        android:id="@+id/tv_heading_one"
+        android:layout_width="289dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/tv_heading_text"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top_three" />
+
+    <TextView
+        android:id="@+id/tv_heading_two"
+        android:layout_width="289dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_heading_text"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_heading_one" />
+
+    <TextView
+        android:id="@+id/tv_heading_three"
+        android:layout_width="289dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/tv_heading_text"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading_one" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
