@@ -1,5 +1,6 @@
 package com.example.yequote.di
 
+import android.util.Log
 import com.example.yequote.BuildConfig.*
 import dagger.Module
 import dagger.Provides
@@ -33,16 +34,19 @@ object ApiModule {
         builder.readTimeout(120, TimeUnit.SECONDS)
         builder.connectTimeout(120, TimeUnit.SECONDS)
 
-        if (DEBUG) {
-            val interceptor = HttpLoggingInterceptor()
-            interceptor.level = HttpLoggingInterceptor.Level.BODY
-            builder.addInterceptor(interceptor)
-            builder.addInterceptor { chain ->
-                val request = chain.request()
-                val newRequest = request.newBuilder().build()
-                chain.proceed(newRequest)
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.level = if (DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
+        builder.addInterceptor(interceptor)
+        builder.addInterceptor { chain ->
+            val request = chain.request()
+            val newRequest = request.newBuilder().build()
+            val response = chain.proceed(newRequest)
+            if (!response.isSuccessful) {
+                Log.e("ApiModule", "Error code: ${response.code}")
             }
+            response
         }
         return builder.build()
     }
+
 }
