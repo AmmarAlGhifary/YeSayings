@@ -2,4 +2,6 @@
     <string name="app_name">YeQuote</string>
     <string name="tv_top_text">Text Here Text Here Text Here Text Here</string>
     <string name="tv_heading_text">lorem impus lorem ipsum</string>
+    <string name="tv_wrapping_text">LOREM IPSUM</string>
+    <string name="tv_main_text">Lorem Ipsum Lorem Ipsum</string>
 </resources>
