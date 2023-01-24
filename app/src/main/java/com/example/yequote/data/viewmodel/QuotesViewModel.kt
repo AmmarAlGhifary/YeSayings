@@ -1,5 +1,6 @@
 package com.example.yequote.data.viewmodel
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -24,11 +25,12 @@ class QuotesViewModel @Inject constructor(private val repository: QuotesReposito
     val error : LiveData<String>
         get() = _error
 
-    private fun getQuotes() = viewModelScope.launch {
+     @SuppressLint("NullSafeMutableLiveData")
+     fun getQuotes() = viewModelScope.launch {
         try {
             val quotesResult = repository.getQuotes()
             if (quotesResult is Result.Success) {
-                _response.postValue(quotesResult.data!!)
+                _response.postValue(quotesResult.data)
             } else if (quotesResult is Result.Error) {
                 _error.postValue("Error: ${quotesResult.exception.message}")
                 Log.e(" quotesViewModel", "Error getting quotes: ${quotesResult.exception.message}")
@@ -38,6 +40,4 @@ class QuotesViewModel @Inject constructor(private val repository: QuotesReposito
             Log.e(" quotesViewModel", "Error getting quotes: ${e.message}")
         }
     }
-
-
 }
