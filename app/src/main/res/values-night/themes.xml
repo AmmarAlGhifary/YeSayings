@@ -12,5 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/tan_700</item>
         <!-- Customize your theme here. -->
+
+        <item name="background">@color/tan_700</item>
+        <item name="backgroundColor">@color/tan_700</item>
+
     </style>
+
 </resources>

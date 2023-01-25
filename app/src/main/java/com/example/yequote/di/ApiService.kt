@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET
+    @GET("/")
     suspend fun getQuotes() : Response<Quotes>
 }

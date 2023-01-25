@@ -42,5 +42,10 @@ class QuotesFragment : Fragment() {
         viewModel.error.observe(viewLifecycleOwner) {
             Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         }
+        binding.swiperefresh.setOnRefreshListener {
+            viewModel.getQuotes()
+            binding.swiperefresh.isRefreshing = false
+        }
+
     }
 }

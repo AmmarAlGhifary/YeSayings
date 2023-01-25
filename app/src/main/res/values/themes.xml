@@ -8,9 +8,12 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/tan_200</item>
         <item name="colorSecondaryVariant">@color/tan_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/tan_200</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/tan_200</item>
         <!-- Customize your theme here. -->
+
+        <item name="backgroundColor">@color/tan_200</item>
+        <item name="background">@color/tan_200</item>
     </style>
 </resources>
